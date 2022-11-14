@@ -25,25 +25,34 @@ export default defineNuxtConfig({
   experimental: {
     reactivityTransform: true,
   },
-
   vite: {
     plugins: [
+      // ...
       AutoImport({
-        resolvers: [ElementPlusResolver()],
+        resolvers: [ElementPlusResolver({
+          ssr: true,
+        })],
       }),
       Components({
-        resolvers: [ElementPlusResolver()],
+        resolvers: [ElementPlusResolver({
+          ssr: true,
+        })],
       }),
     ],
   },
 
   webpack: {
     plugins: [
+      // ...
       AutoImport({
-        resolvers: [ElementPlusResolver()],
+        resolvers: [ElementPlusResolver({
+          ssr: true,
+        })],
       }),
       Components({
-        resolvers: [ElementPlusResolver()],
+        resolvers: [ElementPlusResolver({
+          ssr: true,
+        })],
       }),
     ],
   },
