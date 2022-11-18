@@ -3,7 +3,7 @@ useHead({
   title: 'Home',
 })
 
-const form = ref({})
+const form = reactive({})
 </script>
 
 <template lang="pug">

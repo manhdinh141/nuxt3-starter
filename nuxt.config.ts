@@ -1,8 +1,4 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-
 export default defineNuxtConfig({
   app: {
     head: {
@@ -22,38 +18,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
   ],
+  css: ['~/assets/index.scss'],
   experimental: {
     reactivityTransform: true,
-  },
-  vite: {
-    plugins: [
-      // ...
-      AutoImport({
-        resolvers: [ElementPlusResolver({
-          ssr: true,
-        })],
-      }),
-      Components({
-        resolvers: [ElementPlusResolver({
-          ssr: true,
-        })],
-      }),
-    ],
-  },
-
-  webpack: {
-    plugins: [
-      // ...
-      AutoImport({
-        resolvers: [ElementPlusResolver({
-          ssr: true,
-        })],
-      }),
-      Components({
-        resolvers: [ElementPlusResolver({
-          ssr: true,
-        })],
-      }),
-    ],
   },
 })
