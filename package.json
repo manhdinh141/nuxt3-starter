@@ -12,7 +12,11 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "nuxt": "^3.8.0",
+    "pug": "^3.0.2",
     "vue": "^3.3.7",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^2.10.0"
   }
 }
